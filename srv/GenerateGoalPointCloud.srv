@@ -1,0 +1,12 @@
+# Predict a goal point cloud for a tissue point cloud, given a context point cloud.
+
+# Current (start) shape of the tissue
+sensor_msgs/PointCloud2 tissue_pointcloud
+# Context point cloud the goal is conditioned on
+sensor_msgs/PointCloud2 context_pointcloud
+---
+# Predicted goal cloud. Uses tissue_pointcloud's header. Empty if success is false.
+sensor_msgs/PointCloud2 goal_pointcloud
+bool success
+# Reason for failure, or a short summary on success
+string message
